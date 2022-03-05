@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 06</title>
+    <style>
+        body{
+            background-color: rgba(0, 255, 255, 0.123);
+            color: rgb(3, 56, 56)
+        }
+        h1{
+            color:rgb(255, 255, 255);
+            -webkit-text-stroke-width: 0.8px;
+            -webkit-text-stroke-color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <script>
+        var n1 = prompt("Digite um número")
+        var n2 = prompt("Digite outro número")
+        // o "+" pode servir pra somar ou para concatenar
+        // number + number = soma
+        // string + string = concatena
+        n1 = Number(n1)
+        n2 = Number(n2)
+        // conversão de string para números pode ser feita de 
+        // 3 formas:
+        // - parseInt()/Number.parseInt()
+        // - parseFloat()/Number.parseFloat()
+        // - Number()
+
+        // conversão de número para string pode ser feita de
+        // 2 formas:
+        // - String()
+        // - n.toString()
+        var soma = n1 +n2
+        alert("A soma dos valores é: "+soma)
+        console.log(soma)
+    </script>
+</body>
+</html>
