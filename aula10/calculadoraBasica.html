@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora - Estudos JS</title>
+    <style>
+        html{
+            background-color: rgba(68, 69, 85, 0.432);
+        }
+
+        body{
+            font: normal 12pt Arial;
+            background-color: rgb(246, 247, 253);
+            width: 90%;
+            margin: 0;
+            margin-left: 5%;
+            min-height: 100vh;
+        }
+
+        h1,h2,h3{
+            text-align: center;
+            margin: 0;
+            padding: 15px;
+        }
+
+        h2{
+            font-size:medium;
+            color: gray;
+            line-height: 0;
+            font-style: italic;
+        }
+
+        div.caixa{
+            border: solid black 2px;
+            background: rgb(68, 69, 85);
+            color: white;
+            border-radius: 12px;
+            padding: 20px;
+            width: 350px;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        div.res{
+            float: right;
+        }
+
+        input[type='number']{
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora em um documento</h1>
+    <h2>HTML - CSS - JS</h2>
+
+    <h3>Soma</h3>
+    <div class="caixa" id="soma">
+        <input type="number" name="n1" oninput="atualizaSoma()"> +
+        <input type="number" name="n2" oninput="atualizaSoma()"> =
+        <div class="res"> resultado </div>
+    </div>
+
+    <h3>Subtração</h3>
+    <div class="caixa" id="sub">
+        <input type="number" name="n1" oninput="atualizaSub()"> -
+        <input type="number" name="n2" oninput="atualizaSub()"> =
+        <div class="res"> resultado </div>
+    </div>
+
+    <h3>Divisão</h3>
+    <div class="caixa" id="div">
+        <input type="number" name="n1" oninput="atualizaDiv()"> /
+        <input type="number" name="n2" oninput="atualizaDiv()"> =
+        <div class="res"> resultado </div>
+    </div>
+
+    <h3>Multiplicação</h3>
+    <div class="caixa" id="mult">
+        <input type="number" name="n1" oninput="atualizaMult()"> *
+        <input type="number" name="n2" oninput="atualizaMult()"> =
+        <div class="res"> resultado </div>
+    </div>
+
+    <script>
+        function atualizaSoma(){
+            var n1 = document.querySelector('div#soma>input[name=n1]')
+            var n2 = document.querySelector('div#soma>input[name=n2]')
+            var res = document.querySelector('div#soma>div')
+            n1 = Number(n1.value)
+            n2 = Number(n2.value)
+            var operação = n1 + n2
+            res.innerHTML=operação
+        }
+
+        function atualizaSub(){
+            var n1 = document.querySelector('div#sub>input[name=n1]')
+            var n2 = document.querySelector('div#sub>input[name=n2]')
+            var res = document.querySelector('div#sub>div')
+            n1 = Number(n1.value)
+            n2 = Number(n2.value)
+            var operação = n1 - n2
+            res.innerHTML=operação
+        }
+
+        function atualizaDiv(){
+            var n1 = document.querySelector('div#div>input[name=n1]')
+            var n2 = document.querySelector('div#div>input[name=n2]')
+            var res = document.querySelector('div#div>div')
+            n1 = Number(n1.value)
+            n2 = Number(n2.value)
+            var operação = n1 / n2
+            res.innerHTML=operação
+        }
+
+        function atualizaMult(){
+            var n1 = document.querySelector('div#mult>input[name=n1]')
+            var n2 = document.querySelector('div#mult>input[name=n2]')
+            var res = document.querySelector('div#mult>div')
+            n1 = Number(n1.value)
+            n2 = Number(n2.value)
+            var operação = n1 * n2
+            res.innerHTML=operação
+        }
+    </script>
+</body>
+</html>

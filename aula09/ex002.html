@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Começando estudos do DOM</title>
+    <style>
+        body{
+            background: aquamarine;
+            color: rgb(11, 3, 39);
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="titulo">Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em javaScript</p>
+    <div id="msg">Clique em mim</div>
+    <div name="msg">Eu seria um campo de formulário</div>
+    
+    <script>
+        // window.document.write("Olá mundo") ESSA É A FORMA MAIS 
+        // SIMPLES DE ADICIONAR ALGO NO SITE, MAS NÃO A MAIS INDICADA
+        
+        // window.document.write(window.document.charset) ATRAVÉS DA
+        // ESTRUTURA DOM PODEMOS ACESSAR CONFIGURAÇÕES DO NOSSO SITE
+
+        // 5 FORMAS DE ACESSAR UM ELEMENTO DOM
+        // - por Marca
+        // - por Id
+        // - por Nome
+        // - por Classe
+        // - por Seletor (css)
+
+        // por Marca/Tag
+        // mais de um elemento
+        // o '[]' auxilia a seleção de somente um elemento
+        var p1 = window.document.getElementsByTagName('p')[1]
+        // document.write(p1.innerHTML)
+
+        // por Id
+        // somente um elemento
+        var d = window.document.getElementById('msg')
+        // d.style.background="green"
+        // d.innerText="Olá mundo"
+
+        // por Nome
+        // mais de um elemento
+        var d = document.getElementsByName('msg')[0]
+        // document.write(d.innerText)
+
+        // por Classe
+        // mais de um elemento
+        var t = document.getElementsByClassName('titulo')[0]
+        // t.style.color='red'
+
+        // por Seletor
+        // uma forma diferente (e até recomendada) de selecionar qualquer objeto
+        // utiliza a linguagem dos seletores css
+        // querySelector / querySelectorAll
+        
+            // tag
+            var p2 = document.querySelectorAll('p')[1]
+            // p2.style.color='rgb(247, 18, 189)'
+            // OBS: se existirem mais de um elemento para o seletor digitado,
+            // mas o comando usado for 'querySelector()', somente o primeiro
+            // será armazenado
+
+            // id
+            var d = document.querySelector('div#msg')
+            // d.style.background='green'
+
+            // nome
+            var d2 = document.querySelector('div[name=msg]')
+            // OBS: essa mesma sintaxe pode ser usada para qualquer outro atributo
+            // d2.style.background="red"
+
+            // classe
+            var t1 = document.querySelector('.titulo')
+            // t1.style.color='yellow'
+    </script>
+</body>
+</html>
